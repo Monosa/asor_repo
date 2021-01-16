@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
 	struct sigaction act1;
 	struct sigaction act2;
 	
-	if(sigaction(SIGINT, NULL, &act1) == -1 || sigaction(SIGINT, NULL, &act2) == -1){
+	if(sigaction(SIGINT, NULL, &act1) == -1 || sigaction(SIGTSTP, NULL, &act2) == -1){
 		perror("Error sigaction");
 		return -1;
 	}
